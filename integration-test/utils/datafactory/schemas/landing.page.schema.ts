@@ -17,5 +17,6 @@ export const landingPageSchema = {
     events: { ...sectionEventSchema.definitions.sectionEventSchema },
     volunteerSection: { ...commonsectionSchema.definitions.commonsectionSchema },
   },
+  additionalProperties: false,
   required: ['id', 'heroSection', 'fullBannerSection', 'programmes', 'volunteerSection'],
 };
