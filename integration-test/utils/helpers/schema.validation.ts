@@ -1,24 +1,58 @@
-import Ajv, { ErrorObject } from 'ajv';
-import addFormats from 'ajv-formats';
+import Ajv, { ValidateFunction } from 'ajv';
 
-const ajv = new Ajv({
-  allErrors: true, // Collect all errors, not just the first one
-  verbose: true, // Provide verbose error messages
-  strict: false, // Disable strict mode
+import { ErrorObject } from 'ajv';
+
+interface DataValidateFunction {
+  (data: any, dataCtx?: any): boolean;
+  errors?: Partial<ErrorObject>[]; // must be undefined or array, never null
+}
+
+const ajv = new Ajv({ allErrors: true, verbose: true, strict: false });
+
+ajv.addKeyword({
+  keyword: 'x-case-insensitive',
+  type: 'string', // the data being validated is a string enum
+  modifying: false,
+
+  // compile receives the extension schema, which is an object here
+  compile(schema: any, parentSchema: any): DataValidateFunction {
+    // schema is like { "x-case-insensitive": "true" } or undefined
+    let caseInsensitive = false;
+
+    if (schema && typeof schema === 'object' && typeof schema['x-case-insensitive'] === 'string') {
+      // convert "true"/"false" string to boolean
+      caseInsensitive = schema['x-case-insensitive'].toLowerCase() === 'true';
+    }
+
+    const enumValues: string[] = parentSchema.enum || [];
+
+    const validate: DataValidateFunction = (data: any) => {
+      if (typeof data !== 'string') return false;
+
+      if (!caseInsensitive) {
+        return enumValues.includes(data);
+      }
+
+      return enumValues.some(v => v.toLowerCase() === data.toLowerCase());
+    };
+
+    validate.errors = undefined; // AJV expects errors to be undefined or array
+
+    return validate;
+  },
+
+  metaSchema: {
+    type: 'object', // your extension value is an object, not boolean
+    properties: {
+      'x-case-insensitive': { type: 'string' },
+    },
+    required: ['x-case-insensitive'],
+    additionalProperties: false,
+  },
 });
-addFormats(ajv); // Add extended formats like "uri"
 
 /**
  * Represents a formatted error object with detailed validation information.
- * This is used to structure error details for easier reading and debugging
- * during schema validation.
- *
- * @interface FormattedError
- * @property {string} message - A descriptive message about the error.
- * @property {string} path - The path in the data where the error occurred.
- * @property {any} value - The value that caused the error.
- * @property {string} keyword - The validation keyword associated with the error (e.g., 'type', 'pattern').
- * @property {any} params - Additional parameters associated with the error, typically used for specific validations like 'enum' or 'minLength'.
  */
 interface FormattedError {
   message: string;
@@ -33,30 +67,11 @@ interface FormattedError {
  *
  * @param schema - The JSON schema to validate the data against.
  * @param data - The data to be validated.
- *
- * @throws {Error} Throws an error if the validation fails, containing the detailed validation issues.
- *
- * @example
- * const schema = {
- *   type: "object",
- *   properties: {
- *     name: { type: "string" },
- *   },
- *   required: ["name"]
- * };
- *
- * const data = { name: 123 };  // Invalid data
- *
- * try {
- *   validateSchema(schema, data);
- * } catch (e) {
- *   console.error(e.message);  // Validation failed with detailed error information
- * }
+ * @throws {Error} Throws an error if validation fails, including detailed error info.
  */
 export function validateSchema<T>(schema: object, data: T): void {
   const validate = ajv.compile(schema);
-
-  const valid = validate(data); // Validate the data
+  const valid = validate(data);
 
   if (!valid && validate.errors) {
     const formattedErrors = formatErrors(validate.errors);
@@ -68,48 +83,19 @@ export function validateSchema<T>(schema: object, data: T): void {
 }
 
 /**
- * Formats an array of AJV validation errors into a more structured and readable format.
+ * Formats AJV validation errors into a more readable structure.
  *
- * @param {ErrorObject[] | null} errors - The array of AJV error objects, or `null` if no errors occurred.
- * @returns {FormattedError[]} An array of formatted error objects containing detailed validation information.
- *
- * @example
- * const errors = [
- *   {
- *     message: "should be string",
- *     instancePath: "/name",
- *     keyword: "type",
- *     params: { type: "string" },
- *     data: 123
- *   }
- * ];
- *
- * const formattedErrors = formatErrors(errors);
- * console.log(formattedErrors);
- *
- * // Output:
- * // [
- * //   {
- * //     message: "should be string",
- * //     path: "/name",
- * //     value: 123,
- * //     keyword: "type",
- * //     params: { type: "string" }
- * //   }
- * // ]
+ * @param errors - Raw AJV errors.
+ * @returns An array of formatted error objects.
  */
 function formatErrors(errors: ErrorObject[] | null): FormattedError[] {
-  if (!errors) {
-    return []; // Return an empty array if there are no errors
-  }
+  if (!errors) return [];
 
-  return errors.map((err) => {
-    return {
-      message: err.message || 'Unknown error', // Use the error message or a default message
-      path: err.instancePath || 'N/A', // Path where the error occurred (using 'instancePath' for AJV v7+)
-      value: err.data || 'N/A', // The value that caused the error, 'N/A' if not present
-      keyword: err.keyword || 'N/A', // The validation keyword (e.g., 'type', 'pattern', etc.)
-      params: err.params || {}, // Additional params (e.g., expected value for enum)
-    };
-  });
+  return errors.map((err) => ({
+    message: err.message || 'Unknown error',
+    path: err.instancePath || 'N/A',
+    value: (err as any).data ?? 'N/A', // AJV 8+ includes `data` via `verbose: true`
+    keyword: err.keyword || 'N/A',
+    params: err.params || {},
+  }));
 }

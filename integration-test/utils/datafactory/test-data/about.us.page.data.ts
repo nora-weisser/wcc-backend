@@ -6,12 +6,12 @@ export const aboutUsPageData = {
       {
         path: 'https://drive.google.com/uc?id=1EHE_3m2QTAD-F-cdr2S4luqpyR4FnQX7&export=download',
         alt: 'Women coding community group photo',
-        type: 'desktop',
+        type: 'DESKTOP',
       },
       {
         path: 'https://drive.google.com/uc?id=1MrPVQ3r2kzKcK9n6BRlPaJUaUrpxGGPl&export=download',
         alt: 'Women coding community group photo',
-        type: 'mobile',
+        type: 'MOBILE',
       },
     ],
   },
@@ -45,11 +45,7 @@ export const aboutUsPageData = {
     description: "Ready to join the conversation, or have a question for us? We'd love to hear from you!",
     links: [
       {
-        type: 'email',
-        link: 'london@womencodingcommunity.com',
-      },
-      {
-        type: 'slack',
+        type: 'SLACK',
         link: 'http://shortlink_to_slack.com',
       },
     ],
