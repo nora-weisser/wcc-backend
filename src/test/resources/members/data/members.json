@@ -11,18 +11,18 @@
     "city": "City",
     "companyName": "Company name",
     "memberTypes": [
-      "Member"
+      "MEMBER"
     ],
     "images": [
       {
         "path": "image.png",
         "alt": "member alt",
-        "type": "desktop"
+        "type": "DESKTOP"
       }
     ],
     "network": [
       {
-        "type": "linkedin",
+        "type": "LINKEDIN",
         "link": "https://www.linkedin.com/member"
       }
     ]
@@ -39,18 +39,18 @@
     "city": "City",
     "companyName": "Company name",
     "memberTypes": [
-      "Director"
+      "DIRECTOR"
     ],
     "images": [
       {
         "path": "image.png",
         "alt": "director alt",
-        "type": "tablet"
+        "type": "TABLET"
       }
     ],
     "network": [
       {
-        "type": "github",
+        "type": "GITHUB",
         "link": "https://github.com/director"
       }
     ]

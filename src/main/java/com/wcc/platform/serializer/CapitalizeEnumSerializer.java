@@ -14,6 +14,6 @@ public class CapitalizeEnumSerializer extends JsonSerializer<Enum<?>> {
   public void serialize(
       final Enum<?> value, final JsonGenerator gen, final SerializerProvider serializers)
       throws IOException {
-    gen.writeString(StringUtils.capitalize(value.name().toLowerCase(Locale.ROOT)));
+    gen.writeString(StringUtils.capitalize(value.name().toUpperCase(Locale.ROOT)));
   }
 }

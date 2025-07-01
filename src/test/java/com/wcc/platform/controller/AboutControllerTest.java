@@ -110,7 +110,6 @@ class AboutControllerTest {
   void testCollaboratorOkResponse() throws Exception {
     var fileName = COLLABORATOR.getFileName();
     var expectedJson = FileUtil.readFileAsString(fileName);
-
     when(service.getCollaborator(anyInt(), anyInt()))
         .thenReturn(createCollaboratorPageTest(fileName));
 

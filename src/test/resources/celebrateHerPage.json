@@ -7,7 +7,7 @@
       {
         "path": "https://drive.google.com/uc?id=1efbBcw8yaASbSx3pgqcj06tIN-P2Wf55&export=download",
         "alt": "There is a group of women showing WCC logo",
-        "type": "desktop"
+        "type": "DESKTOP"
       }
     ]
   },
@@ -24,7 +24,7 @@
       {
         "path": "MOBILE.png",
         "alt": "alt imageMOBILE",
-        "type": "mobile"
+        "type": "MOBILE"
       }
     ]
   },
@@ -36,8 +36,8 @@
       ],
       "description": "Celebrate her for first commit to wcc backend.",
       "link": {
-        "title": "linkedIn",
-        "label": "linkedIn",
+        "title": "LINKEDIN",
+        "label": "LINKEDIN",
         "uri": "https://linkedIn.com/lilrafil"
       }
     }

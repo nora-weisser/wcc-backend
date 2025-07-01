@@ -10,11 +10,11 @@
     "title": "Contact us",
     "links": [
       {
-        "type": "email",
+        "type": "EMAIL",
         "link": "london@wcc.com"
       },
       {
-        "type": "slack",
+        "type": "SLACK",
         "link": "http://shortlink_to_slack.com"
       }
     ]
@@ -36,12 +36,12 @@
           {
             "path": "image.png",
             "alt": "director alt",
-            "type": "desktop"
+            "type": "DESKTOP"
           }
         ],
         "network": [
           {
-            "type": "Linkedin",
+            "type": "LINKEDIN",
             "link": "https://www.linkedin.com/director"
           }
         ]
@@ -63,12 +63,12 @@
           {
             "path": "leader.png",
             "alt": "leader alt",
-            "type": "mobile"
+            "type": "MOBILE"
           }
         ],
         "network": [
           {
-            "type": "github",
+            "type": "GITHUB",
             "link": "https://github.com/leader"
           }
         ]
@@ -90,12 +90,12 @@
           {
             "path": "evangelist.png",
             "alt": "alt evangelist",
-            "type": "tablet"
+            "type": "TABLET"
           }
         ],
         "network": [
           {
-            "type": "Linkedin",
+            "type": "LINKEDIN",
             "link": "https://www.linkedin.com"
           }
         ]

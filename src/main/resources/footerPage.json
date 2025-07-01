@@ -5,23 +5,23 @@
   "description": "Women Coding Community is a not-for-profit organisation. © 2024 Women Coding Community",
   "network": [
     {
-      "type": "linkedIn",
+      "type": "LINKEDIN",
       "link": "https://www.linkedin.com/company/womencodingcommunity"
     },
     {
-      "type": "github",
+      "type": "GITHUB",
       "link": "https://github.com/WomenCodingCommunity"
     },
     {
-      "type": "instagram",
+      "type": "INSTAGRAM",
       "link": "https://www.instagram.com/women_coding_community"
     },
     {
-      "type": "email",
+      "type": "EMAIL",
       "link": "london@womencodingcommunity.com"
     },
     {
-      "type": "slack",
+      "type": "SLACK",
       "link": "https://join.slack.com/t/womencodingcommunity/shared_invite/zt-2hpjwpx7l-rgceYBIWp6pCiwc0hVsX8A"
     }
   ],

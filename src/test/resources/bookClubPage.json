@@ -6,7 +6,7 @@
       {
         "path": "https://cloudprovider.com/image.png",
         "alt": "Books on the shelf",
-        "type": "desktop"
+        "type": "DESKTOP"
       }
     ]
   },
@@ -17,7 +17,7 @@
     "title": "Join us in our Study Group Slack channel",
     "links": [
       {
-        "type": "slack",
+        "type": "SLACK",
         "link": "http://shortlink_to_slack.com/#prog_book_club"
       }
     ]
@@ -78,9 +78,9 @@
   },
   "customStyle": {
     "backgroundColour": {
-      "color": "primary",
+      "color": "PRIMARY",
       "shade": {
-        "name": "light",
+        "name": "LIGHT",
         "value": 90
       }
     }

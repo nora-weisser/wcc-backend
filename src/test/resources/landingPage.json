@@ -172,7 +172,7 @@
         "image": {
           "path": "https://drive.google.com/amazon-desktop-logo.png",
           "alt": "Amazon logo",
-          "type": "desktop"
+          "type": "DESKTOP"
         },
         "name": "Amazon",
         "link": {
@@ -183,7 +183,7 @@
         "image": {
           "path": "https://drive.google.com/jetbrains-desktop-logo.png",
           "alt": "JetBrains logo",
-          "type": "desktop"
+          "type": "DESKTOP"
         },
         "name": "JetBrains",
         "link": {
@@ -194,7 +194,7 @@
         "image": {
           "path": "https://drive.google.com/devoxx-uk-desktop-logo.png",
           "alt": "Devoxx UK logo",
-          "type": "desktop"
+          "type": "DESKTOP"
         },
         "name": "Devoxx UK",
         "link": {

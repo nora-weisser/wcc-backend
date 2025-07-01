@@ -100,7 +100,7 @@ class CmsServiceIntegrationTest extends SurrealDbIntegrationTest {
     assertEquals(collaboratorPage.contact(), result.contact());
     assertEquals(collaboratorPage.metadata(), result.metadata());
 
-    assertEquals(1, result.collaborators().size());
+    assertEquals(7, result.collaborators().size());
 
     assertNotNull(result.collaborators().getFirst().getMemberTypes());
   }

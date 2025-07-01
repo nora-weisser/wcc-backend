@@ -6,7 +6,7 @@
       {
         "path": "https://cloudprovider.com/image.png",
         "alt": "Books on the shelf",
-        "type": "desktop"
+        "type": "DESKTOP"
       }
     ]
   },

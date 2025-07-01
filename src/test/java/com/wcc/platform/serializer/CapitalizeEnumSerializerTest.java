@@ -29,7 +29,7 @@ class CapitalizeEnumSerializerTest {
 
     serializer.serialize(testEnum, jsonGenerator, serializerProvider);
 
-    String expectedResult = "Partner";
+    String expectedResult = "PARTNER";
     verify(jsonGenerator).writeString(expectedResult);
   }
 

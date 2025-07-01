@@ -2,7 +2,7 @@
   "id": "page:COLLABORATORS",
   "metadata": {
     "pagination": {
-      "totalItems": 1,
+      "totalItems": 7,
       "totalPages": 1,
       "currentPage": 1,
       "pageSize": 10
@@ -12,48 +12,188 @@
     "title": "WCC Collaborators"
   },
   "section": {
-    "description": "description"
+    "description": "Our collaborators are the backbone of our community, offering vital expertise and support that drive our initiatives forward and enhance our digital presence."
   },
   "contact": {
     "title": "Contact us",
     "links": [
       {
-        "type": "email",
-        "link": "london@wcc.com"
+        "type": "EMAIL",
+        "link": "london@womencodingcommunity.com"
       },
       {
-        "type": "slack",
-        "link": "http://shortlink_to_slack.com"
+        "type": "SLACK",
+        "link": "https://join.slack.com/t/womencodingcommunity/shared_invite/zt-2hpjwpx7l-rgceYBIWp6pCiwc0hVsX8A"
       }
     ]
   },
   "collaborators": [
     {
-      "fullName": "Member1",
-      "position": "Senior Software Engineer",
-      "email": "member@wcc.com",
-      "slackDisplayName": "Slack name",
-      "country": {
-        "countryCode": "Country code",
-        "countryName": "Country name"
-      },
-      "city": "City",
-      "companyName": "Company name",
+      "fullName": "Lily N.",
+      "position": "UX/UI Designer & Engineer",
       "images": [
         {
-          "path": "image.png",
-          "alt": "director alt",
-          "type": "desktop"
+          "path": "https://womencodingcommunity.com/assets/images/collaborators/1.jpeg",
+          "alt": "Collaborator profile image",
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
-          "link": "https://www.linkedin.com/member"
+          "type": "LINKEDIN",
+          "link": "https://www.linkedin.com/in/lilynguyendk"
+        },
+        {
+          "type": "GITHUB",
+          "link": "https://github.com/lilyndk"
         }
       ],
       "memberTypes": [
-        "Member"
+        "COLLABORATOR"
+      ]
+    },
+    {
+      "fullName": "Chloe Britland-Whiting",
+      "position": "Data Analyst",
+      "images": [
+        {
+          "path": "https://womencodingcommunity.com/assets/images/collaborators/9.jpeg",
+          "alt": "Collaborator profile image",
+          "type": "DESKTOP"
+        }
+      ],
+      "network": [
+        {
+          "type": "LINKEDIN",
+          "link": "https://www.linkedin.com/in/chloe-britland-whiting/"
+        },
+        {
+          "type": "GITHUB",
+          "link": "https://github.com/cribw27"
+        }
+      ],
+      "memberTypes": [
+        "COLLABORATOR"
+      ]
+    },
+    {
+      "fullName": "Neha Sharma",
+      "position": "Principal Engineer",
+      "images": [
+        {
+          "path": "https://womencodingcommunity.com/assets/images/collaborators/5.jpeg",
+          "alt": "Collaborator profile image",
+          "type": "DESKTOP"
+        }
+      ],
+      "network": [
+        {
+          "type": "LINKEDIN",
+          "link": "https://www.linkedin.com/in/nehha/"
+        },
+        {
+          "type": "GITHUB",
+          "link": "https://github.com/Neha"
+        }
+      ],
+      "memberTypes": [
+        "COLLABORATOR"
+      ]
+    },
+    {
+      "fullName": "Sophy O.",
+      "position": "UI Developer/UX Designer",
+      "images": [
+        {
+          "path": "https://womencodingcommunity.com/assets/images/collaborators/10.jpeg",
+          "alt": "Collaborator profile image",
+          "type": "DESKTOP"
+        }
+      ],
+      "network": [
+        {
+          "type": "LINKEDIN",
+          "link": "https://www.linkedin.com/in/sophyo/"
+        },
+        {
+          "type": "GITHUB",
+          "link": "https://github.com/sssoz"
+        }
+      ],
+      "memberTypes": [
+        "COLLABORATOR"
+      ]
+    },
+    {
+      "fullName": "Chiara Pigoni",
+      "position": "Software Developer",
+      "images": [
+        {
+          "path": "https://womencodingcommunity.com/assets/images/collaborators/11.jpeg",
+          "alt": "Collaborator profile image",
+          "type": "DESKTOP"
+        }
+      ],
+      "network": [
+        {
+          "type": "LINKEDIN",
+          "link": "https://www.linkedin.com/in/chiarapigoni/"
+        },
+        {
+          "type": "GITHUB",
+          "link": "https://github.com/kikilondon"
+        }
+      ],
+      "memberTypes": [
+        "COLLABORATOR"
+      ]
+    },
+    {
+      "fullName": "Nevena Verbič",
+      "position": "Software Developer",
+      "images": [
+        {
+          "path": "https://womencodingcommunity.com/assets/images/collaborators/12.jpeg",
+          "alt": "Collaborator profile image",
+          "type": "DESKTOP"
+        }
+      ],
+      "network": [
+        {
+          "type": "LINKEDIN",
+          "link": "link: https://www.linkedin.com/in/nevena-verbič-83a16ab/"
+        },
+        {
+          "type": "GITHUB",
+          "link": "https://github.com/nverbic"
+        }
+      ],
+      "memberTypes": [
+        "COLLABORATOR"
+      ]
+    },
+    {
+      "fullName": "Joana Brito",
+      "position": "Frontend Engineer",
+      "images": [
+        {
+          "path": "image5.jpeg",
+          "alt": "Collaborator profile image",
+          "type": "DESKTOP"
+        }
+      ],
+      "network": [
+        {
+          "type": "LINKEDIN",
+          "link": "https://www.linkedin.com/in/joana-brito216"
+        },
+        {
+          "type": "GITHUB",
+          "link": "https://github.com/joanaBrit"
+        }
+      ],
+      "memberTypes": [
+        "VOLUNTEER"
       ]
     }
   ]

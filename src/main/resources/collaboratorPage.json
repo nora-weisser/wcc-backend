@@ -2,7 +2,7 @@
   "id": "page:COLLABORATORS",
   "metadata": {
     "pagination": {
-      "totalItems": 1,
+      "totalItems": 7,
       "totalPages": 1,
       "currentPage": 1,
       "pageSize": 10
@@ -18,11 +18,11 @@
     "title": "Contact us",
     "links": [
       {
-        "type": "email",
+        "type": "EMAIL",
         "link": "london@womencodingcommunity.com"
       },
       {
-        "type": "slack",
+        "type": "SLACK",
         "link": "https://join.slack.com/t/womencodingcommunity/shared_invite/zt-2hpjwpx7l-rgceYBIWp6pCiwc0hVsX8A"
       }
     ]
@@ -35,21 +35,21 @@
         {
           "path": "https://womencodingcommunity.com/assets/images/collaborators/1.jpeg",
           "alt": "Collaborator profile image",
-          "type": "desktop"
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
+          "type": "LINKEDIN",
           "link": "https://www.linkedin.com/in/lilynguyendk"
         },
         {
-          "type": "github",
+          "type": "GITHUB",
           "link": "https://github.com/lilyndk"
         }
       ],
       "memberTypes": [
-        "Collaborator"
+        "COLLABORATOR"
       ]
     },
     {
@@ -59,21 +59,21 @@
         {
           "path": "https://womencodingcommunity.com/assets/images/collaborators/9.jpeg",
           "alt": "Collaborator profile image",
-          "type": "desktop"
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
+          "type": "LINKEDIN",
           "link": "https://www.linkedin.com/in/chloe-britland-whiting/"
         },
         {
-          "type": "github",
+          "type": "GITHUB",
           "link": "https://github.com/cribw27"
         }
       ],
       "memberTypes": [
-        "Collaborator"
+        "COLLABORATOR"
       ]
     },
     {
@@ -83,21 +83,21 @@
         {
           "path": "https://womencodingcommunity.com/assets/images/collaborators/5.jpeg",
           "alt": "Collaborator profile image",
-          "type": "desktop"
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
+          "type": "LINKEDIN",
           "link": "https://www.linkedin.com/in/nehha/"
         },
         {
-          "type": "github",
+          "type": "GITHUB",
           "link": "https://github.com/Neha"
         }
       ],
       "memberTypes": [
-        "Collaborator"
+        "COLLABORATOR"
       ]
     },
     {
@@ -107,21 +107,21 @@
         {
           "path": "https://womencodingcommunity.com/assets/images/collaborators/10.jpeg",
           "alt": "Collaborator profile image",
-          "type": "desktop"
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
+          "type": "LINKEDIN",
           "link": "https://www.linkedin.com/in/sophyo/"
         },
         {
-          "type": "github",
+          "type": "GITHUB",
           "link": "https://github.com/sssoz"
         }
       ],
       "memberTypes": [
-        "Collaborator"
+        "COLLABORATOR"
       ]
     },
     {
@@ -131,21 +131,21 @@
         {
           "path": "https://womencodingcommunity.com/assets/images/collaborators/11.jpeg",
           "alt": "Collaborator profile image",
-          "type": "desktop"
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
+          "type": "LINKEDIN",
           "link": "https://www.linkedin.com/in/chiarapigoni/"
         },
         {
-          "type": "github",
+          "type": "GITHUB",
           "link": "https://github.com/kikilondon"
         }
       ],
       "memberTypes": [
-        "Collaborator"
+        "COLLABORATOR"
       ]
     },
     {
@@ -155,21 +155,21 @@
         {
           "path": "https://womencodingcommunity.com/assets/images/collaborators/12.jpeg",
           "alt": "Collaborator profile image",
-          "type": "desktop"
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
+          "type": "LINKEDIN",
           "link": "link: https://www.linkedin.com/in/nevena-verbič-83a16ab/"
         },
         {
-          "type": "github",
+          "type": "GITHUB",
           "link": "https://github.com/nverbic"
         }
       ],
       "memberTypes": [
-        "Collaborator"
+        "COLLABORATOR"
       ]
     },
     {
@@ -179,21 +179,21 @@
         {
           "path": "image5.jpeg",
           "alt": "Collaborator profile image",
-          "type": "desktop"
+          "type": "DESKTOP"
         }
       ],
       "network": [
         {
-          "type": "linkedin",
+          "type": "LINKEDIN",
           "link": "https://www.linkedin.com/in/joana-brito216"
         },
         {
-          "type": "github",
+          "type": "GITHUB",
           "link": "https://github.com/joanaBrit"
         }
       ],
       "memberTypes": [
-        "Volunteer"
+        "VOLUNTEER"
       ]
     }
   ]

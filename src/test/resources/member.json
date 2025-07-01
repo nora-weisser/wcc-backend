@@ -13,12 +13,12 @@
     {
       "path": "image.png",
       "alt": "director alt",
-      "type": "desktop"
+      "type": "DESKTOP"
     }
   ],
   "network": [
     {
-      "type": "Linkedin",
+      "type": "LINKEDIN",
       "link": "https://www.linkedin.com/director"
     }
   ]

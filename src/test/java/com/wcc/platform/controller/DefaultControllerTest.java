@@ -79,7 +79,7 @@ class DefaultControllerTest {
         .andExpect(jsonPath("$.title", is("footer_title")))
         .andExpect(jsonPath("$.subtitle", is("footer_subtitle")))
         .andExpect(jsonPath("$.description", is("footer_desc")))
-        .andExpect(jsonPath("$.network[0].type", is("slack")))
+        .andExpect(jsonPath("$.network[0].type", is("SLACK")))
         .andExpect(jsonPath("$.network[0].link", is("slack_link")))
         .andExpect(jsonPath("$.link.title", is("label_title")))
         .andExpect(jsonPath("$.link.label", is("label")))

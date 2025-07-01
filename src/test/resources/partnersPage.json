@@ -16,11 +16,11 @@
     "title": "Become a WCC Partner",
     "links": [
       {
-        "type": "email",
+        "type": "EMAIL",
         "link": "london@womencodingcommunity.com"
       },
       {
-        "type": "slack",
+        "type": "SLACK",
         "link": "https://shortlink_to_slack.com/"
       }
     ]
@@ -33,7 +33,7 @@
         "image": {
           "path": "https://drive.google.com/surrealdb-desktop-logo.png",
           "alt": "SurrealDB logo",
-          "type": "desktop"
+          "type": "DESKTOP"
         },
         "name": "SurrealDB",
         "description": "SurrealDB is an innovative, multi-model, cloud-ready database, suitable for modern and traditional applications.",
@@ -46,7 +46,7 @@
         "image": {
           "path": "https://drive.google.com/amazon-desktop-logo.png",
           "alt": "Amazon logo",
-          "type": "desktop"
+          "type": "DESKTOP"
         },
         "name": "Amazon",
         "description": "Amazon is a global leader in e-commerce, redefining online shopping with its vast product selection, seamless customer experience, and advanced logistics network.",
@@ -59,7 +59,7 @@
         "image": {
           "path": "https://drive.google.com/jetbrains-desktop-logo.png",
           "alt": "JetBrains logo",
-          "type": "desktop"
+          "type": "DESKTOP"
         },
         "name": "JetBrains",
         "description": "JetBrains creates intelligent software development tools used by over 11.4 million professionals and 88 Fortune Global Top 100 companies.",
@@ -72,7 +72,7 @@
         "image": {
           "path": "https://drive.google.com/devoxx-uk-desktop-logo.png",
           "alt": "Devoxx UK logo",
-          "type": "desktop"
+          "type": "DESKTOP"
         },
         "name": "Devoxx UK",
         "description": "Provide a first class tech conference where passionate developers can network, hack, get inspired and learn throughout.",
