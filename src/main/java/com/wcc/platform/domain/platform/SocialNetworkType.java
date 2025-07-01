@@ -1,4 +1,6 @@
 package com.wcc.platform.domain.platform;
+import com.fasterxml.jackson.annotation.JsonValue;
+import java.util.Locale;
 
 /** Community available network types. */
 public enum SocialNetworkType {
@@ -13,5 +15,11 @@ public enum SocialNetworkType {
   MEETUP,
   EMAIL,
   UNKNOWN,
-  DEFAULT_LINK
+  DEFAULT_LINK;
+
+  @JsonValue
+  @Override
+  public String toString() {
+    return name().toLowerCase(Locale.ENGLISH);
+  }
 }

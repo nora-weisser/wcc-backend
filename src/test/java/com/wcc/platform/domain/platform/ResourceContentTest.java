@@ -114,8 +114,8 @@ class ResourceContentTest {
 
     String expected =
         "ResourceContent(id=1, name=Test Resource, description=Test Description, "
-            + "rawContent=Raw Content, type=IMAGE, images=[Image[path=MOBILE.png, "
-            + "alt=alt imageMOBILE, type=MOBILE]])";
+            + "rawContent=Raw Content, type=IMAGE, images=[Image[path=mobile.png, "
+            + "alt=alt imagemobile, type=mobile]])";
 
     assertEquals(expected, resource.toString());
   }

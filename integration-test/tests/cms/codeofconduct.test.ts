@@ -1,9 +1,10 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
+import {test} from 'utils/fixtures/fixtures'
 import { validateSchema } from '@utils/helpers/schema.validation';
-import { codeofconductSchema } from '@utils/datafactory/schemas/codeofconduct.schema';
 import { codeOfConductPageData } from '@utils/datafactory/test-data/codeofconduct.page.data';
 import { PATHS } from '@utils/datafactory/paths.data';
 import { createOrUpdatePage } from '@utils/helpers/preconditions';
+import { SCHEMAS } from '@utils/datafactory/schemas.data';
 
 test.describe('Validate positive test cases for Code Of Conduct Page API', () => {
   test.beforeEach(async ({ request }) => {
@@ -11,7 +12,7 @@ test.describe('Validate positive test cases for Code Of Conduct Page API', () =>
     await createOrUpdatePage(request, 'CODE OF CONDUCT Page', url, codeOfConductPageData);
   });
 
-  test('GET /api/cms/v1/code-of-conduct returns correct data', async ({ request }) => {
+  test('GET /api/cms/v1/code-of-conduct returns correct data', async ({ request, openApiSchemas }) => {
     const response = await request.get(PATHS.CODE_OF_CONDUCT);
 
     // response status validation
@@ -21,7 +22,7 @@ test.describe('Validate positive test cases for Code Of Conduct Page API', () =>
 
     // schema validation
     try {
-      validateSchema(codeofconductSchema, body);
+      validateSchema(openApiSchemas[SCHEMAS.CODE_OF_CONDUCT], body);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Schema validation failed: ${e.message}`);

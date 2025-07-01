@@ -36,6 +36,6 @@ class LeadershipMemberTest {
             .memberTypes(List.of(MemberType.EVANGELIST))
             .build();
 
-    assertEquals("LeadershipMember(memberTypes=[EVANGELIST])", evangelist.toString());
+    assertEquals("LeadershipMember(memberTypes=[evangelist])", evangelist.toString());
   }
 }

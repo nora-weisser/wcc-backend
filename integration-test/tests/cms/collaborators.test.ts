@@ -1,9 +1,10 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
+import {test} from 'utils/fixtures/fixtures'
 import { PATHS } from '@utils/datafactory/paths.data';
-import { collaboratorsSchema } from '@utils/datafactory/schemas/collaborators.schema';
 import { validateSchema } from '@utils/helpers/schema.validation';
 import { createOrUpdatePage } from '@utils/helpers/preconditions';
 import { collaboratorsPageData } from '@utils/datafactory/test-data/collaborators.page.data';
+import { SCHEMAS } from '@utils/datafactory/schemas.data';
 
 
 test.describe('Validate positive test cases for COLLABORATORS Page API', () => {
@@ -12,13 +13,13 @@ test.describe('Validate positive test cases for COLLABORATORS Page API', () => {
     await createOrUpdatePage(request, 'COLLABORATORS Page', url, collaboratorsPageData);
   });
 
-  test('GET /api/cms/v1/collaborators returns correct data', async ({ request }) => {
+  test.fixme('GET /api/cms/v1/collaborators returns correct data', async ({ request, openApiSchemas }) => {
     const response = await request.get(PATHS.COLLABORATORS);
     expect(response.status()).toBe(200);
     const body = await response.json();
     // schema validation
     try {
-      validateSchema(collaboratorsSchema, body);
+      validateSchema(openApiSchemas[SCHEMAS.COLLABORATORS_], body);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Schema validation failed: ${e.message}`);

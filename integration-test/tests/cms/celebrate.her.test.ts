@@ -1,9 +1,10 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
+import {test} from 'utils/fixtures/fixtures'
 import { validateSchema } from '@utils/helpers/schema.validation';
-import { celebrateHerPageSchema } from '@utils/datafactory/schemas/celebrateHer.overview.schema';
 import { celebrateHerData } from '@utils/datafactory/test-data/celebrate.her.page.data';
 import { PATHS } from '@utils/datafactory/paths.data';
 import { createOrUpdatePage } from '@utils/helpers/preconditions';
+import { SCHEMAS } from '@utils/datafactory/schemas.data';
 
 test.describe('Validate positive test cases for Celebrate Her Page API', () => {
   test.beforeEach(async ({ request }) => {
@@ -11,7 +12,7 @@ test.describe('Validate positive test cases for Celebrate Her Page API', () => {
     await createOrUpdatePage(request, 'CELEBRATE HER Page', url, celebrateHerData);
   });
 
-  test('GET /api/cms/v1/celebrateHer/overview returns correct about us data', async ({ request }) => {
+  test('GET /api/cms/v1/celebrateHer/overview returns correct about us data', async ({ request, openApiSchemas }) => {
     const response = await request.get(PATHS.CELEBRATE_HER_PAGE);
 
     // response status validation
@@ -21,7 +22,7 @@ test.describe('Validate positive test cases for Celebrate Her Page API', () => {
 
     // schema validation
     try {
-      validateSchema(celebrateHerPageSchema, body);
+      validateSchema(openApiSchemas[SCHEMAS.CELEBRATE_HER_], body);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Schema validation failed: ${e.message}`);

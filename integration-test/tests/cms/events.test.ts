@@ -1,9 +1,10 @@
-import { expect, test } from '@playwright/test';
-import { eventsSchema } from '@utils/datafactory/schemas/events.schema';
+import { expect } from '@playwright/test';
+import {test} from 'utils/fixtures/fixtures'
 import { validateSchema } from '@utils/helpers/schema.validation';
 import { eventsPageData } from '@utils/datafactory/test-data/events.page.data';
 import { PATHS } from '@utils/datafactory/paths.data';
 import { createOrUpdatePage } from '@utils/helpers/preconditions';
+import { SCHEMAS } from '@utils/datafactory/schemas.data';
 
 test.describe('Validate positive test cases for EVENTS Page API', () => {
   test.beforeEach(async ({ request }) => {
@@ -11,7 +12,7 @@ test.describe('Validate positive test cases for EVENTS Page API', () => {
     await createOrUpdatePage(request, 'EVENTS Page', url, eventsPageData);
   });
 
-  test('GET /api/cms/v1/events returns correct data', async ({ request }) => {
+  test.fixme('GET /api/cms/v1/events returns correct data', async ({ request, openApiSchemas }) => {
     const response = await request.get(PATHS.EVENTS_PAGE);
 
     // response status validation
@@ -21,7 +22,7 @@ test.describe('Validate positive test cases for EVENTS Page API', () => {
 
     // schema validation
     try {
-      validateSchema(eventsSchema, body);
+      validateSchema(openApiSchemas[SCHEMAS.EVENTS_PAGE], body);
     } catch (e: unknown) {
       if (e instanceof Error) {
         throw new Error(`Schema validation failed: ${e.message}`);

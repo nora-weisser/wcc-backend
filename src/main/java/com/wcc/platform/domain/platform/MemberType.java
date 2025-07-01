@@ -1,5 +1,8 @@
 package com.wcc.platform.domain.platform;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+import java.util.Locale;
+
 /** All available member types in the community. */
 public enum MemberType {
   DIRECTOR,
@@ -11,5 +14,11 @@ public enum MemberType {
   MEMBER,
   SPEAKER,
   COLLABORATOR,
-  PARTNER
+  PARTNER;
+
+  @JsonValue
+  @Override
+  public String toString() {
+    return name().toLowerCase(Locale.ENGLISH);
+  }
 }
